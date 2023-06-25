@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://socialnode.onrender.com/api"
+    }
+  ]
+}
