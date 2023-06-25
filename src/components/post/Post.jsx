@@ -19,7 +19,7 @@ export default function Post({ post }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?userId=${post.userId}`);
+      const res = await axios.get(`https://socialnode.onrender.com/api/users?userId=${post.userId}`);
       setUser(res.data);
     };
     fetchUser();
@@ -37,7 +37,7 @@ export default function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <Link to={`/profile/${user.username}`}>
+            <Link to={`https://socialnode.onrender.com/api/profile/${user.username}`}>
               <img
                 className="postProfileImg"
                 src={
