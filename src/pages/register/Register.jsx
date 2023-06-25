@@ -20,7 +20,10 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("/auth/register", user);
+        await axios.post(
+          "https://socialnode.onrender.com/api/auth/register",
+          user
+        );
         history("/login");
       } catch (error) {
         console.log(error);
