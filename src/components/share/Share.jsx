@@ -30,11 +30,11 @@ export default function Share() {
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://socialnode.onrender.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      await axios.post("/posts", newPost);
+      await axios.post("https://socialnode.onrender.com/api/posts", newPost);
       window.location.reload();
     } catch (err) {}
   };
